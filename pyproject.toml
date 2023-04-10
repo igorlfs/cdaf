@@ -1,0 +1,5 @@
+[tool.mypy]
+mypy_path = "~/.config/mypy/stubs/"
+
+[tool.ruff]
+ignore = ["E501"]
