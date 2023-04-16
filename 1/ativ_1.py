@@ -7,8 +7,7 @@ import statsmodels.formula.api as smf
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn
-from scipy.stats import poisson, skellam
+from scipy.stats import poisson
 
 # |%%--%%| <G1pXr3iZao|oFt0I88Jfc>
 
@@ -352,7 +351,7 @@ r"""°°°
 # |%%--%%| <RA37LDNTCx|Y33aR7tpc7>
 
 
-def get_table_adjusted(df: pd.DataFrame, league: str, season: str):
+def get_table_adjusted(df: pd.DataFrame):
     teams = df["HT"].unique()
     data: list[list] = []
     for team in teams:
@@ -405,7 +404,7 @@ def championship(league: str, season: str):
         data,
         columns=["HT", "AT", "HS", "AS", "WDL"],
     )
-    return get_table_adjusted(df_simulation_games, league, season)
+    return get_table_adjusted(df_simulation_games)
 
 
 # |%%--%%| <ErVAkGO1pl|wW7nwrFFlC>
