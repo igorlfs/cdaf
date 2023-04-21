@@ -10,7 +10,22 @@ from mplsoccer import PyPizza, FontManager
 
 from typing import Tuple
 
-# |%%--%%| <kE9WNQ0Vc1|xYbQZcp8HS>
+# |%%--%%| <kE9WNQ0Vc1|6aFArCbV9W>
+
+# Me rode para instalar meu tema
+#!pip install catppuccin-matplotlib
+
+# |%%--%%| <6aFArCbV9W|pKiGxSCIlG>
+
+import mplcatppuccin  # noqa
+
+AXIS_COLOR = "#cdd6f4"
+
+# |%%--%%| <pKiGxSCIlG|SMKXbuovcN>
+
+plt.style.use("mocha")
+
+# |%%--%%| <SMKXbuovcN|xYbQZcp8HS>
 r"""°°°
 # [CDAF] Atividade 2
 °°°"""
@@ -121,8 +136,8 @@ for series in zip(*[tup[3] for tup in all_teams_data]):
 def plot_common():
     plt.ylabel("Gols")
     plt.xlabel("Jogo")
-    plt.axhline(0, color="black", linestyle="--", linewidth=0.5)
-    plt.axvline(0, color="black", linestyle="--", linewidth=0.5)
+    plt.axhline(0, color=AXIS_COLOR, linestyle="--", linewidth=0.5)
+    plt.axvline(0, color=AXIS_COLOR, linestyle="--", linewidth=0.5)
     plt.legend()
     plt.show()
 

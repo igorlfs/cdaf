@@ -318,7 +318,7 @@ def match_histogram(poisson_model, home_team: str, away_team: str):
         score_matrix,
         extent=[-0.5, max_goals + 0.5, -0.5, max_goals + 0.5],
         aspect="auto",
-        cmap=plt.cm.Reds,
+        cmap=plt.set_cmap("Reds"),
     )
     fig.colorbar(pos, ax=ax)
     ax.set_title("Probability of outcome")
