@@ -1,5 +1,29 @@
-[tool.mypy]
-mypy_path = "~/.config/mypy/stubs/"
-
 [tool.ruff]
 ignore = ["E501"]
+
+[tool.poetry]
+name = "cdaf"
+version = "0.1.0"
+description = ""
+authors = ["Igor <igorlfs@ufmg.br>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+matplotlib = "^3.7.1"
+matplotsoccer = "^0.0.8"
+pandas = "1.5.3"
+pandas-stubs = "<=1.5.4"
+scipy = "^1.10.1"
+statsmodels = "^0.13.5"
+sklearn = "^0.0.post4"
+mplsoccer = "^1.1.11"
+socceraction = "^1.4.0"
+tqdm = "^4.65.0"
+catppuccin-matplotlib = "^0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

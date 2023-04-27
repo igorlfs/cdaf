@@ -510,7 +510,7 @@ def plot_nodes(scatter_df: pd.DataFrame):
         zorder=3,
     )
     # annotating player name
-    for i, row in scatter_df.iterrows():
+    for _, row in scatter_df.iterrows():
         pitch.annotate(
             row.player_id,
             xy=(row.x, row.y),
@@ -559,7 +559,7 @@ def passing_netwrok(scatter_df: pd.DataFrame, lines_df: pd.DataFrame, team_id: s
         ax=ax["pitch"],
         zorder=3,
     )
-    for i, row in scatter_df.iterrows():
+    for _, row in scatter_df.iterrows():
         pitch.annotate(
             int(row.player_id),
             xy=(row.x, row.y),
