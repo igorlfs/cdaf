@@ -10,14 +10,9 @@ from mplsoccer import PyPizza, FontManager
 
 from typing import Tuple
 
-# |%%--%%| <kE9WNQ0Vc1|6aFArCbV9W>
+# |%%--%%| <kE9WNQ0Vc1|pKiGxSCIlG>
 
-# Me rode para instalar meu tema
-#!pip install catppuccin-matplotlib
-
-# |%%--%%| <6aFArCbV9W|pKiGxSCIlG>
-
-import mplcatppuccin  # noqa
+import mplcatppuccin  # noqa # pyright: ignore
 
 AXIS_COLOR = "#cdd6f4"
 

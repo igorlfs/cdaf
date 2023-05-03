@@ -1,3 +1,6 @@
+# pyright: reportUnusedExpression=false
+
+# |%%--%%| <cwDcIYOjvy|Worc4egccP>
 import pandas as pd
 import socceraction.spadl as spadl
 import matplotsoccer as mps
@@ -167,7 +170,7 @@ df_shot.head()
 # |%%--%%| <AjxDSlqeS9|7fcWY972nq>
 
 
-def print_shots(shots: pd.DataFrame, id_team: str):
+def print_shots(shots: pd.DataFrame, id_team: int):
     pitch = Pitch(line_color="black")
     fig, ax = pitch.draw(figsize=(10, 7))
     # Plot the shots by looping through them.
@@ -537,7 +540,7 @@ plot_nodes(scatter_df_away)
 # |%%--%%| <tnRsh77ZIZ|IIj6kEPPwd>
 
 
-def passing_netwrok(scatter_df: pd.DataFrame, lines_df: pd.DataFrame, team_id: str):
+def passing_netwrok(scatter_df: pd.DataFrame, lines_df: pd.DataFrame, team_id: int):
     # plot once again pitch and vertices
     pitch = Pitch(line_color="grey")
     fig, ax = pitch.grid(
@@ -571,7 +574,7 @@ def passing_netwrok(scatter_df: pd.DataFrame, lines_df: pd.DataFrame, team_id: s
             zorder=4,
         )
 
-    for i, row in lines_df.iterrows():
+    for _, row in lines_df.iterrows():
         player1 = int(row["pair_key"].split("_")[0])
         player2 = int(row["pair_key"].split("_")[1])
         # take the average location of players to plot a line between them
