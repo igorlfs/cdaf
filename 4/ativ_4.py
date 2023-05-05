@@ -278,11 +278,9 @@ r"""°°°
 # |%%--%%| <XQ150xYhxw|ykmZuVHRI8>
 
 xT = xt.ExpectedThreat(l=25, w=16)
-step = 5000
-acc_xT = np.zeros((16, 25))
-for i in range(0, len(spadl), step):
-    xT.fit(spadl[i : i + step])
-    acc_xT += xT.xT
+# workaround for socceraction v1.4.0
+xt._safe_divide = lambda a, b: np.nan_to_num(a / b)
+xT.fit(spadl)
 
 # |%%--%%| <ykmZuVHRI8|alvrNx7zSg>
 r"""°°°
@@ -295,7 +293,6 @@ r"""°°°
 # |%%--%%| <alvrNx7zSg|nsWkC0TDFx>
 
 prog_actions = xt.get_successful_move_actions(spadl)
-xT.xT = acc_xT
 prog_actions["action_value"] = xT.rate(prog_actions)
 
 # |%%--%%| <nsWkC0TDFx|WypxX7D61v>
