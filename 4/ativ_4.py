@@ -1,19 +1,25 @@
-# pyright: reportUnusedExpression=false
+import subprocess
 
-# |%%--%%| <7ra0KERMts|lyFGxnQI9p>
-
-# Importando bibliotecas
-from tqdm import tqdm
 import numpy as np
 import pandas as pd
+import sklearn.metrics as metrics
 import socceraction.spadl as spd
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
 from socceraction import xthreat as xt
+from tqdm import tqdm
 
 # |%%--%%| <lyFGxnQI9p|K2BwC6JeSx>
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
-import sklearn.metrics as metrics
+
+def pretty_df(df: pd.DataFrame | pd.Series):
+    try:
+        subprocess.run(
+            ["vd", "-f", "csv", "-"], input=df.to_csv(index=False), text=True
+        )
+    except subprocess.CalledProcessError:
+        print("Visidata not installed, skipping")
+
 
 # |%%--%%| <K2BwC6JeSx|1CKaF8zuVd>
 r"""°°°
@@ -31,7 +37,7 @@ r"""°°°
 °°°"""
 # |%%--%%| <gsvwfbbfWQ|ISdgdbD1L1>
 
-DATA_FOLDER = "data"
+DATA_FOLDER = "data/wyscout"
 
 # |%%--%%| <ISdgdbD1L1|gSQIUK1GmU>
 
@@ -111,7 +117,7 @@ spadl = pd.concat(actions).reset_index(drop=True)
 
 # adicionando o nome dos jogadores
 # path = r"C:\Users\Galo\Hugo_Personal\Data\Wyscout_Top_5\players.json"
-path = f"{DATA_FOLDER}/players/players.json"
+path = f"{DATA_FOLDER}/players.json"
 players = pd.read_json(path_or_buf=path)
 players["player_name"] = players["shortName"].apply(
     lambda x: x.encode("utf-8").decode("unicode-escape")  # conserte as strings
