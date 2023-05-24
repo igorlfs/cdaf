@@ -438,9 +438,9 @@ r"""°°°
 r"""°°°
 #### Respostas
 
-4) ???
+4) Todas as ações com $P_{scores} \geq 0.95$ são chutes (ao gol), que, no geral, incrementam muito a chance de se fazer gol. Por outro lado, quando essas ações dão errado, elas diminuem muito a chance de se marcar. Outras ações não sofrem desse viés: essa alteração drástica ocorre exclusivamente com chutes. Dessa maneira, essas outras ações acabam não sendo tão valorizadas.
 
-5) ÀS equações 1 e 2, respectivamente.
+5) Às equações 1 e 2, respectivamente.
 °°°"""
 # |%%--%%| <1d5iZK8TT4|lm1xoWHkpf>
 r"""°°°

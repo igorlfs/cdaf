@@ -116,7 +116,6 @@ spadl = pd.concat(actions).reset_index(drop=True)
 # |%%--%%| <CZfeg1CShd|9ljXuWlgrw>
 
 # adicionando o nome dos jogadores
-# path = r"C:\Users\Galo\Hugo_Personal\Data\Wyscout_Top_5\players.json"
 path = f"{DATA_FOLDER}/players.json"
 players = pd.read_json(path_or_buf=path)
 players["player_name"] = players["shortName"].apply(
