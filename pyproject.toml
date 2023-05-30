@@ -1,6 +1,9 @@
 [tool.ruff]
 ignore = ["E501"]
 
+[tool.black]
+line-length = 90
+
 [tool.poetry]
 name = "cdaf"
 version = "0.1.0"

@@ -306,9 +306,9 @@ def train_vaep(X_train, y_train, X_test, y_test):
         p = sum(y_train[m]) / len(y_train[m])
         base = [p] * len(y_train[m])
         y_train_pred = models[m].predict_proba(X_train)[:, 1]
-        train_brier = mt.brier_score_loss(
-            y_train[m], y_train_pred
-        ) / mt.brier_score_loss(y_train[m], base)
+        train_brier = mt.brier_score_loss(y_train[m], y_train_pred) / mt.brier_score_loss(
+            y_train[m], base
+        )
         print(m + " Train NBS: " + str(train_brier))
         print()
 

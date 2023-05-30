@@ -14,9 +14,7 @@ from tqdm import tqdm
 
 def pretty_df(df: pd.DataFrame | pd.Series):
     try:
-        subprocess.run(
-            ["vd", "-f", "csv", "-"], input=df.to_csv(index=False), text=True
-        )
+        subprocess.run(["vd", "-f", "csv", "-"], input=df.to_csv(index=False), text=True)
     except subprocess.CalledProcessError:
         print("Visidata not installed, skipping")
 
