@@ -1,18 +1,13 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import MinMaxScaler
-
-# |%%--%%| <MmTch3rLt6|Lb4BXgvDEI>
-
-from mplsoccer import PyPizza, FontManager
-
-# |%%--%%| <Lb4BXgvDEI|kE9WNQ0Vc1>
-
 from typing import Tuple
 
-# |%%--%%| <kE9WNQ0Vc1|pKiGxSCIlG>
-
+import matplotlib.pyplot as plt
 import mplcatppuccin  # noqa # pyright: ignore
+import pandas as pd
+from mplsoccer import FontManager, PyPizza
+from sklearn.preprocessing import MinMaxScaler
+
+# |%%--%%| <MmTch3rLt6|pKiGxSCIlG>
+
 
 AXIS_COLOR = "#cdd6f4"
 
@@ -45,7 +40,7 @@ r"""°°°
 °°°"""
 # |%%--%%| <M0WuFuWIC6|7V2wl44MUM>
 
-df = pd.read_csv("./serie-a.csv")
+df = pd.read_csv("./2/serie-a.csv")
 
 # |%%--%%| <7V2wl44MUM|UattEp1FWt>
 

@@ -1,21 +1,15 @@
 # pyright: reportUnusedExpression=false
 
 # |%%--%%| <cwDcIYOjvy|Worc4egccP>
-import pandas as pd
-import socceraction.spadl as spadl
-import matplotsoccer as mps
-
-# |%%--%%| <Worc4egccP|G4E7DWdPZo>
-
 import matplotlib.pyplot as plt
+import matplotsoccer as mps
+import numpy as np
+import pandas as pd
+import scipy
+import socceraction.spadl as spadl
 from mplsoccer import Pitch
 
-# |%%--%%| <G4E7DWdPZo|vuxT3MTsOw>
-
-import scipy
-import numpy as np
-
-# |%%--%%| <vuxT3MTsOw|6xfQEvl0Ex>
+# |%%--%%| <Worc4egccP|6xfQEvl0Ex>
 r"""°°°
 # [CDAF] Atividade 3
 °°°"""
@@ -44,7 +38,7 @@ r"""°°°
 °°°"""
 # |%%--%%| <zpDMH3FseV|RINC2Aes1N>
 
-PATH_DF = "data/events/events_Italy.json"
+PATH_DF = "data/wyscout/events/events_Italy.json"
 
 # |%%--%%| <RINC2Aes1N|V5Cfn5L9vb>
 
